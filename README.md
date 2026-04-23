@@ -18,7 +18,7 @@ Adds [Player2](https://player2.game) as a native inference engine in [Pantella](
 
 ## Installation
 
-1. Download the addon and place the `player2_addon` folder inside your Pantella repository's `addons/` directory:
+1. Download the latest release from [here](https://github.com/CarlosNahuelcoy/Pantella-player2/releases/) and extract the `player2_addon` folder inside your Pantella repository's `addons/` directory:
    ```
    repositories\Pathos14489_Pantella_dev\addons\player2_addon\
    ```
