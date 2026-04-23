@@ -18,9 +18,9 @@ Adds [Player2](https://player2.game) as a native inference engine in [Pantella](
 
 ## Installation
 
-1. Download the addon and place the `player2_addon` folder inside your Pantella `addons/` directory:
+1. Download the addon and place the `player2_addon` folder inside your Pantella repository's `addons/` directory:
    ```
-   Pantella/addons/player2_addon/
+   repositories\Pathos14489_Pantella_dev\addons\player2_addon\
    ```
 
 2. In your `config.json`, set the inference engine to Player2:
@@ -38,7 +38,7 @@ Adds [Player2](https://player2.game) as a native inference engine in [Pantella](
 
 ## Optional: Enable Player2 STT
 
-If you want to use Player2 for speech recognition as well, add `"player2_stt"` to your STT engine in `config.json`:
+If you want to use Player2 for speech recognition as well, update your `config.json`:
 ```json
 "SpeechToText": {
     "stt_enabled": true,
