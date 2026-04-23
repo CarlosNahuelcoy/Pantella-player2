@@ -1,0 +1,50 @@
+<div id="player2-editor">
+    <h2>Player2 Configuration</h2>
+    <div class="container">
+        <div class="interface-part">
+            <h4>Connection Status</h4>
+            <div id="player2-status-bar" style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                <span id="player2-status-icon" style="font-size:1.3em; color:#888;">⬤</span>
+                <span id="player2-status-text" style="color:#ddd;">Checking...</span>
+            </div>
+            <button id="player2-detect-btn">🎮 Connect via Player2 App</button>
+            <button id="player2-browser-btn">🌐 Connect via Browser</button>
+            <button id="player2-disconnect-btn" style="display:none; background-color:#7a3030;">✕ Disconnect</button>
+            <p id="player2-info-text" style="margin-top:10px; color:#aaa; font-size:0.9em;"></p>
+        </div>
+    </div>
+    <div id="player2-device-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;">
+        <div style="background:#2a2a4a; border:1px solid #5a5a8c; border-radius:10px; padding:32px; max-width:420px; width:90%; text-align:center; box-shadow:0 0 40px rgba(0,0,100,0.5);">
+            <h3 style="color:#ddd; display:block; margin-top:0;">Connect Player2</h3>
+            <p style="color:#bbb;">A browser tab has been opened. Log in to Player2 and approve the connection.</p>
+            <p style="color:#bbb;">If the tab didn't open automatically:</p>
+            <a id="player2-verify-link" href="#" target="_blank" style="color:#7aabff; word-break:break-all;">Open Player2 Login</a>
+            <div id="player2-polling-indicator" style="display:flex; align-items:center; justify-content:center; gap:10px; color:#aaa; margin:16px 0;">
+                <span style="display:inline-block; width:18px; height:18px; border:3px solid #555; border-top-color:#7aabff; border-radius:50%; animation:p2spin 0.8s linear infinite;"></span>
+                Waiting for approval...
+            </div>
+            <p id="player2-device-approved" style="display:none; color:#4CAF50; font-weight:bold;">✓ Connected successfully!</p>
+            <button id="player2-cancel-device-btn" style="background:#555; color:white; border:none; padding:10px 24px; cursor:pointer; border-radius:5px; margin-top:6px;">Cancel</button>
+        </div>
+    </div>
+</div>
+<style>
+    @keyframes p2spin { to { transform: rotate(360deg); } }
+    #player2-detect-btn, #player2-browser-btn {
+        background-color: #6f6f6f; color: white; border: none; padding: 10px 16px;
+        cursor: pointer; font-size: 0.95em; border-radius: 4px;
+        display: block; width: 100%; margin-bottom: 8px; text-align: left;
+    }
+    #player2-detect-btn:hover, #player2-browser-btn:hover { background-color: #5a5a5a; }
+    #player2-detect-btn:disabled, #player2-browser-btn:disabled { background-color: #444; cursor: not-allowed; }
+    #player2-disconnect-btn {
+        background-color: #6f6f6f; color: white; border: none; padding: 10px 16px;
+        cursor: pointer; font-size: 0.95em; border-radius: 4px;
+        display: block; width: 100%; margin-bottom: 8px; text-align: left;
+    }
+    #player2-disconnect-btn:hover { background-color: #a33a3a; }
+    #player2-status-icon.connected    { color: #4CAF50 !important; box-shadow: 0 0 8px #4CAF50; }
+    #player2-status-icon.disconnected { color: #f44336 !important; }
+    #player2-status-icon.checking     { color: #ffaa00 !important; }
+    #player2-status-bar.connected #player2-status-text { text-shadow: 0 0 8px #4CAF50; }
+</style>
