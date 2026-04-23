@@ -54,7 +54,7 @@ If you want to use Player2 for speech recognition as well, update your `config.j
 
 ## Support
 
-For help, reach out in the **[Pantella Discord](https://discord.gg/pantella)**.
+For help, reach out in the **[Pantella Discord](https://discord.gg/M7Zw8mBY6r)**.
 
 ## Credits
 
