@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Adds support for the Player2 API as an inference engine in Pantella.",
     "author": "Gerik Uylerk",
-    "project_url": "https://link/to/your/project/this/addon/is/for",
+    "project_url": "https://github.com/CarlosNahuelcoy/Pantella-player2",
     "enabled": true,
     "dependencies": []
 }
